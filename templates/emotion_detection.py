@@ -22,3 +22,7 @@ def emotion_detector(text_to_analyze):
     )
 
     return response.text
+
+if __name__ == "__main__":
+    result = emotion_detector("I love this new technology.")
+    print(result)
