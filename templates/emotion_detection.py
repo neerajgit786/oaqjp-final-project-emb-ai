@@ -24,5 +24,11 @@ def emotion_detector(text_to_analyze):
     return response.text
 
 if __name__ == "__main__":
-    result = emotion_detector("I love this new technology.")
+    if len(sys.argv) < 2:
+        print('Usage: python emotion_detection.py "Your text here"')
+        sys.exit(1)
+
+    text_to_analyze = " ".join(sys.argv[1:])
+
+    result = emotion_detector(text_to_analyze)
     print(result)
